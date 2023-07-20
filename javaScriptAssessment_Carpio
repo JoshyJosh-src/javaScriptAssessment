@@ -1,0 +1,32 @@
+const NFTs = [];
+
+function mintNFT(_name, _artist, _category) {
+  const NFT = {
+    name: _name,
+    artist: _artist,
+    category: _category
+  };
+  NFTs.push(NFT);
+}
+
+function listNFTs() {
+  for (let i = 0; i < NFTs.length; i++) {
+    console.log("\n-----------------------");
+    console.log("ID: " + (i + 1));
+    console.log("-----------------------");
+    console.log("Name: \t\t" + NFTs[i].name);
+    console.log("Artist: \t" + NFTs[i].artist);
+    console.log("Category: \t" + NFTs[i].category);
+  }
+}
+
+function getTotalSupply() {
+  console.log("\nTotal Supply: " + NFTs.length);
+}
+
+mintNFT("NFT 1", "Jacob", "Gaming");
+mintNFT("NFT 2", "Gregory", "Art");
+mintNFT("NFT 3", "Hannah", "Music");
+
+listNFTs();
+getTotalSupply();
